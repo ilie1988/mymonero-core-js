@@ -75,6 +75,11 @@ class MyMoneroCoreBridgeEssentialsClass extends MyMoneroBridgeClass_Base
 		return MyMoneroBridge_utils.ret_val_boolstring_to_bool(ret.retVal);
 	}
 
+	set_current_blockchain_height(height) {
+		const args = {height};
+		return JSON.parse(this.Module.set_current_blockchain_height(JSON.stringify(args)));
+	}
+
 	new_payment_id() {
 		const args = {};
 		const args_str = JSON.stringify(args);

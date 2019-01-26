@@ -100,6 +100,7 @@ set(
     ${MONERO_SRC}/ringct/rctCryptoOps.c
     ${MONERO_SRC}/ringct/rctSigs.cpp
     ${MONERO_SRC}/ringct/bulletproofs.cc
+    ${MONERO_SRC}/ringct/bulletproofs2.cc
     ${MONERO_SRC}/ringct/multiexp.cc
     ${MONERO_SRC}/mnemonics/electrum-words.cpp
     ${MONERO_SRC}/vtlogger/logger.cpp

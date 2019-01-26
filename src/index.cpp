@@ -45,6 +45,7 @@ EMSCRIPTEN_BINDINGS(my_module)
     emscripten::function("decode_address", &serial_bridge::decode_address);
     emscripten::function("is_subaddress", &serial_bridge::is_subaddress);
     emscripten::function("is_integrated_address", &serial_bridge::is_integrated_address);
+    emscripten::function("set_current_blockchain_height", &serial_bridge::set_current_blockchain_height);
     //
     emscripten::function("new_integrated_address", &serial_bridge::new_integrated_address);
     emscripten::function("new_payment_id", &serial_bridge::new_payment_id);
