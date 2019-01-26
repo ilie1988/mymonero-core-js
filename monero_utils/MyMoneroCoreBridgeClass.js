@@ -370,6 +370,7 @@ class MyMoneroCoreBridgeClass extends MyMoneroCoreBridgeEssentialsClass
 		const args_str = JSON.stringify(args, null, '')
 		this.Module.send_funds(args_str);
 	}
+	
 	encrypt_payment_id(payment_id, public_key, secret_key)
 	{
 		const args =

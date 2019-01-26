@@ -45,6 +45,17 @@ class MyMoneroCoreBridgeEssentialsClass extends MyMoneroBridgeClass_Base
 	}
 	//
 	//
+	set_current_blockchain_height(height) {
+        const args = {height};
+        console.log('setting current blockchain height to', height);
+        const ret = JSON.parse(this.Module.set_current_blockchain_height(JSON.stringify(args)));
+        console.log('setting current blockchain height returned', ret);
+        if (typeof ret.err_msg !== 'undefined' && ret.err_msg) {
+            throw ret.err_msg;
+        }
+        return ret.retVal === "true";
+    }
+
 	is_subaddress(addr, nettype) {
 		const args =
 		{
@@ -73,11 +84,6 @@ class MyMoneroCoreBridgeEssentialsClass extends MyMoneroBridgeClass_Base
 			throw ret.err_msg;
 		}
 		return MyMoneroBridge_utils.ret_val_boolstring_to_bool(ret.retVal);
-	}
-
-	set_current_blockchain_height(height) {
-		const args = {height};
-		return JSON.parse(this.Module.set_current_blockchain_height(JSON.stringify(args)));
 	}
 
 	new_payment_id() {
