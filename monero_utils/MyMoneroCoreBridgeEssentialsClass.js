@@ -47,9 +47,7 @@ class MyMoneroCoreBridgeEssentialsClass extends MyMoneroBridgeClass_Base
 	//
 	set_current_blockchain_height(height) {
         const args = {height};
-        console.log('setting current blockchain height to', height);
         const ret = JSON.parse(this.Module.set_current_blockchain_height(JSON.stringify(args)));
-        console.log('setting current blockchain height returned', ret);
         if (typeof ret.err_msg !== 'undefined' && ret.err_msg) {
             throw ret.err_msg;
         }
