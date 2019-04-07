@@ -283,6 +283,7 @@ There's no need to build monero_utils/MyMoneroCoreCpp as a build is provided, bu
 
 * Execute `bin/update_submodules` 
 
+* Execute `npm install`
 
 ### Install Emscripten SDK
 
@@ -309,9 +310,10 @@ Download a copy of the contents of the Boost source into `./contrib/boost-sdk/`.
 
 * Execute `bin/build-emcpp.sh`
 
-Or if you want to copy the build products to their distribution locations, 
+# generate mymonero-core.js 
 
-* Execute `bin/archive-emcpp.sh`
+* Execute `bin/package_browser_js`
+
 
 **NOTE** If you want to build for asmjs instead of wasm, edit `CMakeLists.txt` to turn the `MM_EM_ASMJS` option to `ON` before you run either the `build` or `archive` script. Finally, at every place you instantiate a `MyMoneroCoreBridge` instance, ensure that the `asmjs` flag passed as an init argument is set to `true` (If not, loading will not work). 
 
