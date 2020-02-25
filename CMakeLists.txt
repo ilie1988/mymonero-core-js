@@ -66,7 +66,7 @@ set(
     ${MONERO_SRC}/cryptonote_basic/cryptonote_format_utils.cpp
     ${MONERO_SRC}/crypto/crypto.cpp
     ${MONERO_SRC}/crypto/hash.c
-    ${MONERO_SRC}/crypto/slow-hash.c
+    ${MONERO_SRC}/crypto/slow-hash-dummied.cpp
     ${MONERO_SRC}/crypto/oaes_lib.c
     ${MONERO_SRC}/crypto/crypto-ops.c
     ${MONERO_SRC}/crypto/crypto-ops-data.c
@@ -145,6 +145,7 @@ set (
 -s EXCEPTION_DEBUG=1 \
 -s DEMANGLE_SUPPORT=1 \
 -s NO_DYNAMIC_EXECUTION=1 \
+-s NODEJS_CATCH_EXIT=0 \
 -s EXTRA_EXPORTED_RUNTIME_METHODS='[\"UTF8ToString\"]' \
 "
     # • Disabling exception catching does not introduce silent failures 
