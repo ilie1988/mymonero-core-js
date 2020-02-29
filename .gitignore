@@ -2,7 +2,7 @@
 node_modules/
 coverage
 .vscode
-
+contrib/boost-sdk
 build
 
 contrib/boost-sdk/bjam
